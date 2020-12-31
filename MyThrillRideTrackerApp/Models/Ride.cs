@@ -11,14 +11,21 @@ namespace MyThrillRideTrackerApp.Models
     public class Ride
     {
         public int RideId { get; set; }
+
         public string Name { get; set; }
+
         public string Description { get; set; }
+
         public int Height { get; set; }
+
         public int Length { get; set; }
 
         [Display(Name = "Top Speed")]
         public int TopSpeed { get; set; } //mph
+
         public string RideType { get; set; }
+
+        public string WebsiteLink { get; set; }
 
         [DataType(DataType.Date)]
         [Display(Name = "Build Date")]
@@ -26,9 +33,11 @@ namespace MyThrillRideTrackerApp.Models
 
         [NotMapped]
         public IFormFile ImageFile { get; set; }
+
         public List<ImageFileName> ImageFiles { get; set; }
 
         public int ParkId { get; set; }
+
         public Park Park { get; set; }
 
     }

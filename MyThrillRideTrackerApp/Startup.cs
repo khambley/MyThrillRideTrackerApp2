@@ -25,6 +25,8 @@ namespace MyThrillRideTrackerApp
             {
                 opts.UseSqlServer((Configuration["ConnectionStrings:DataConnection"]));
             });
+            // creates a service for the ITrackerRepository that uses TrackerRepository as the implementation class. pg.329 eBook
+            services.AddScoped<ITrackerRepository, TrackerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +45,7 @@ namespace MyThrillRideTrackerApp
             {
                 endpoints.MapDefaultControllerRoute();
             });
+            SeedData.EnsurePopulated(app);
         }
     }
 }
