@@ -25,72 +25,84 @@ namespace MyThrillRideTrackerApp.Models
                 context.Parks.AddRange(
                     new Park
                     {
-                        Name = "Test Park 1",
-                        Description = "This is a test ride description.",
-                        City = "Chicago",
+                        Name = "Six Flags Great America",
+                        Description = "This is a great park.",
+                        City = "Gurnee",
                         State = "IL",
-                        WebsiteLink = "http://www.google.com",
-                        ParkMapLink = "http://google.com/maps",
+                        WebsiteLink = "https://www.sixflags.com/greatamerica/",
+                        ParkMapLink = "https://www.sixflags.com/greatamerica/plan-your-visit/park-map",
                         ImageFiles = new List<ImageFileName>()
                         {
                             new ImageFileName()
                             {
-                                FileName = "logo1.png"
+                                FileName = "SFGA-logo1.png"
                             }
                         },
                         Rides = new List<Ride>
                         {
                             new Ride()
                             {
-                                Name = "Test Ride 1",
-                                Description = "This is a test ride description.",
-                                Height = 150,
-                                Length = 1200,
+                                Name = "Batman The Ride",
+                                Description = "This is a fun looping coaster.",
+                                Height = 105,
+                                Length = 2700,
                                 TopSpeed = 55,
+                                GForce = 4,
                                 RideType = "Roller Coaster",
-                                WebsiteLink = "http://www.google.com",
-                                BuildDate = Convert.ToDateTime("01/01/2018"),
+                                ThrillType = "High",
+                                MaterialType = "Steel",
+                                WebsiteLink = "https://www.sixflags.com/greatamerica/attractions/batman-ride-5",
+                                BuildDate = Convert.ToDateTime("05/02/1992"),
+                                Manufacturer = "Bolliger & Mabillard",
                                 ImageFiles = new List<ImageFileName>()
                                 {
                                     new ImageFileName()
                                     {
-                                        FileName = "image1.jpg"
+                                        FileName = "Batman_The_Ride_at_Six_Flags_Great_America.jpg"
                                     }
                                 }
                             },
                             new Ride()
                             {
-                                Name = "Test Ride 2",
-                                Description = "This is a test ride description.",
-                                Height = 182,
-                                Length = 2400,
-                                TopSpeed = 65,
+                                Name = "Raging Bull",
+                                Description = "This is an all-time favorite fun coaster.",
+                                Height = 202,
+                                Length = 5057,
+                                TopSpeed = 73,
+                                GForce = 4,
                                 RideType = "Roller Coaster",
-                                WebsiteLink = "http://www.google.com",
-                                BuildDate = Convert.ToDateTime("01/01/2015"),
+                                ThrillType = "High",
+                                MaterialType = "Steel",
+                                WebsiteLink = "https://www.sixflags.com/greatamerica/attractions/raging-bull",
+                                BuildDate = Convert.ToDateTime("05/01/1999"),
+                                Manufacturer = "Bolliger & Mabillard",
                                 ImageFiles = new List<ImageFileName>()
                                 {
                                     new ImageFileName()
                                     {
-                                        FileName = "image2.jpg"
+                                        FileName = "raging-bull.jpg"
                                     }
                                 }
                             },
                             new Ride()
                             {
-                                Name = "Test Ride 3",
-                                Description = "This is a test ride description.",
-                                Height = 182,
-                                Length = 2400,
-                                TopSpeed = 65,
+                                Name = "Goliath",
+                                Description = "This is a super fast zero-G inverted thrill coaster.",
+                                Height = 180,
+                                Length = 3084,
+                                TopSpeed = 72,
+                                GForce = 0,
                                 RideType = "Roller Coaster",
-                                WebsiteLink = "http://www.google.com",
-                                BuildDate = Convert.ToDateTime("01/01/2015"),
+                                ThrillType = "Max",
+                                MaterialType = "Wooden",
+                                WebsiteLink = "https://www.sixflags.com/greatamerica/attractions/goliath-3",
+                                BuildDate = Convert.ToDateTime("06/19/2014"),
+                                Manufacturer = "Rocky Mountain Construction",
                                 ImageFiles = new List<ImageFileName>()
                                 {
                                     new ImageFileName()
                                     {
-                                        FileName = "logo1.png"
+                                        FileName = "Goliath-Great-America1.jpg"
                                     }
                                 }
                             }
@@ -98,10 +110,10 @@ namespace MyThrillRideTrackerApp.Models
                     },
                     new Park
                     {
-                        Name = "Six Flags Great America",
+                        Name = "Six Flags Fiesta Texas",
                         Description = "This is a great park.",
-                        City = "Gurnee",
-                        State = "IL",
+                        City = "San Antonio",
+                        State = "TX",
                         WebsiteLink = "http://www.google.com",
                         ParkMapLink = "http://google.com/maps",
                         ImageFiles = new List<ImageFileName>()
@@ -115,55 +127,67 @@ namespace MyThrillRideTrackerApp.Models
                         {
                             new Ride()
                             {
-                                Name = "MaxForce",
-                                Description = "This is a really fun ride.",
+                                Name = "Goliath",
+                                Description = "This is like the Batman at GA.",
                                 Height = 100,
-                                Length = 1000,
-                                TopSpeed = 75,
+                                Length = 2693,
+                                TopSpeed = 55,
+                                GForce = 4,
                                 RideType = "Roller Coaster",
-                                WebsiteLink = "http://www.google.com",
-                                BuildDate = Convert.ToDateTime("07/03/2019"),
+                                ThrillType = "High",
+                                MaterialType = "Steel",
+                                WebsiteLink = "https://www.sixflags.com/fiestatexas/attractions/goliath-4",
+                                BuildDate = Convert.ToDateTime("05/03/2008"),
+                                Manufacturer = "Bolliger & Mabillard",
                                 ImageFiles = new List<ImageFileName>()
                                 {
                                     new ImageFileName()
                                     {
-                                        FileName = "image1.jpg"
+                                        FileName = "sfft_goliath1.jpg"
                                     }
                                 }
                             },
                             new Ride()
                             {
-                                Name = "Test Ride 2",
-                                Description = "This is a test ride description.",
+                                Name = "Iron Rattler",
+                                Description = "This is similar to the Goliath at GA.",
                                 Height = 182,
-                                Length = 2400,
-                                TopSpeed = 65,
+                                Length = 3266,
+                                TopSpeed = 70,
+                                GForce = 4,
                                 RideType = "Roller Coaster",
-                                WebsiteLink = "http://www.google.com",
-                                BuildDate = Convert.ToDateTime("01/01/2015"),
+                                ThrillType = "Max",
+                                MaterialType = "Wooden",
+                                WebsiteLink = "https://www.sixflags.com/fiestatexas/attractions/iron-rattler",
+                                BuildDate = Convert.ToDateTime("05/01/2013"),
+                                Manufacturer = "Rocky Mountain Construction",
                                 ImageFiles = new List<ImageFileName>()
                                 {
                                     new ImageFileName()
                                     {
-                                        FileName = "image2.jpg"
+                                        FileName = "iron-rattler1.jpg"
                                     }
                                 }
                             },
                             new Ride()
                             {
-                                Name = "Test Ride 3",
-                                Description = "This is a test ride description.",
-                                Height = 182,
-                                Length = 2400,
-                                TopSpeed = 65,
+                                Name = "Boomerang",
+                                Description = "This is a fast looping roller coaster.",
+                                Height = 125,
+                                Length = 936,
+                                TopSpeed = 58,
+                                GForce = 5,
                                 RideType = "Roller Coaster",
-                                WebsiteLink = "http://www.google.com",
-                                BuildDate = Convert.ToDateTime("01/01/2015"),
+                                ThrillType = "Max",
+                                MaterialType = "Steel",
+                                WebsiteLink = "https://www.sixflags.com/fiestatexas/attractions/boomerang-2",
+                                BuildDate = Convert.ToDateTime("05/01/1999"),
+                                Manufacturer = "Vekoma",
                                 ImageFiles = new List<ImageFileName>()
                                 {
                                     new ImageFileName()
                                     {
-                                        FileName = "logo1.png"
+                                        FileName = "Boomerang1.jpg"
                                     }
                                 }
                             }

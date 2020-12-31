@@ -23,13 +23,20 @@ namespace MyThrillRideTrackerApp.Models
         [Display(Name = "Top Speed")]
         public int TopSpeed { get; set; } //mph
 
+        public int GForce { get; set; }
+
         public string RideType { get; set; }
+        public string ThrillType { get; set; }
+        public string MaterialType { get; set; }
 
         public string WebsiteLink { get; set; }
 
         [DataType(DataType.Date)]
+        [Column(TypeName = "date")]
         [Display(Name = "Build Date")]
         public DateTime BuildDate { get; set; }
+
+        public string Manufacturer { get; set; }
 
         [NotMapped]
         public IFormFile ImageFile { get; set; }

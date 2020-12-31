@@ -1,16 +1,16 @@
-﻿@model IQueryable<Ride> 
+﻿@model RideListViewModel 
 @{
     ViewData["Title"] = "Home";
 }
 
-@foreach (var r in Model)
+@foreach (var r in Model.Rides)
 {
     <div>
         <h3>@r.Name</h3>
         @r.Description
         <h4>@r.Park.Name</h4>
         <h5>@r.Park.City, @r.Park.State</h5>
-        
     </div>
 }
+<div page-model="@Model.PagingInfo" page-action="Index"></div>
 

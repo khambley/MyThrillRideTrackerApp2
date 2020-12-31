@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using MyThrillRideTrackerApp.Controllers;
 using MyThrillRideTrackerApp.Models;
+using MyThrillRideTrackerApp.Models.ViewModels;
 
 namespace MyThrillRideTrackerApp.Tests
 {
@@ -25,13 +26,11 @@ namespace MyThrillRideTrackerApp.Tests
             HomeController controller = new HomeController(mock.Object);
 
             // Act
-            // to get data returned from Action method, have to cast the value of its ViewData.Model property to the expected data type. p.344
-            IEnumerable<Ride> result =
-                (controller.Index() as ViewResult).ViewData.Model
-                as IEnumerable<Ride>;
+            RideListViewModel result =
+                controller.Index().ViewData.Model as RideListViewModel;
 
             // Assert
-            Ride[] rideArray = result.ToArray();
+            Ride[] rideArray = result.Rides.ToArray();
             Assert.True(rideArray.Length == 2);
             Assert.Equal("Ride1", rideArray[0].Name);
             Assert.Equal("Ride2", rideArray[1].Name);
